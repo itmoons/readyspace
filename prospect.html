@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadySpace</title>
+    <link rel="icon" type="image/jpg" href="img\logo.jpg" />
+    <link rel="stylesheet" href="css\prospect.css">
+    <script src="js\jquery-1.12.3.js"></script>
+    <script src="js\prospect.js"></script>
+    <script src="js\header.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <a href="index.html"><div class="logo"></div></a>
+            <nav>
+                <ul class="main">
+                    <li>
+                        <h3><a href="index.html">PLANET</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="config.html">CONFIG</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="portfolio.html">PORTPOLIO</a></h3>
+                    </li>
+                    <li>
+                        <h3><a class="on" href="prospect.html">PROSPECT</a></h3>
+                    </li>
+                    <ul class="nat" id="darkModeToggle">
+                        <li class="kor on" onclick="changeMode('dark')"><a>Light</a></li>
+                        <li class="eng" onclick="changeMode('light')"><a>Dark</a></li>
+                    </ul>
+                </ul>
+            </nav>
+        </header>
+        
+        <ul class="top">
+            <li><a>HOBBY</a></li>
+            <li><a>PASSION</a></li>
+            <li><a>CHALLENGE</a></li>
+        </ul>
+        
+
+        <div class="con">
+            <div class="wap"><!-- first page of tiles --> 
+                <!-- three rows in full page -->
+                <div class="three rows" id="first-page">
+                  <!-- three tiles per row -->
+                  <div class="three cols">
+                    <!-- tile plus some schmancyness -->
+                    <div class="schmancy tile pic0">
+                      <!-- tile content -->
+                      <div class="content"> READYSAPCE. </div>
+                    </div>
+                    <!-- and so on... -->
+                    <div class="schmancy tile pic3">
+                      <div class="content"> PASSION. </div>
+                    </div>
+                    <div class="schmancy tile pic1">
+                      <div class="content"> EFFECT. </div>
+                    </div>
+                  </div>
+                  <div class="four cols">
+                    <div class="schmancy tile pic2">
+                      <div class="content"> CHALLENGE. </div>
+                    </div>
+                    <div class="schmancy tile pic1">
+                      <div class="content"> HOBBY. </div>
+                    </div>
+                    <div class="schmancy tile pic2">
+                      <div class="content"> SPACE. </div>
+                    </div>
+                    <div class="schmancy tile pic1">
+                      <div class="content"> DEVELOP. </div>
+                    </div>
+                  </div> 
+                  <div class="three cols">
+                    <div class="schmancy tile pic0">
+                      <div class="content"> DESIGN. </div>
+                    </div>
+                    <div class="schmancy tile pic3">
+                      <div class="content"> PLAN. </div>
+                    </div>
+                    <div class="schmancy tile pic1">
+                      <div class="content"> EXACTLY. </div>
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <footer>
+            <div class="fl">
+                <div class="top">
+                    <ul class="main">
+                        <li class="log"><a href="#"><img src="img\footer\로고 2.png"></a></li>
+                        <li>
+                            <ul class="sub" id="sub_0">
+                                <li id="sub_1">READY SPACE</li>
+                                <li id="sub_2">사업자번호<span>228-07-64839</span></li>
+                                <li id="sub_2">이메일<span>readyspace0810@gmail.com</span></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="sub">
+                                <li id="sub_1"></li>
+                                <li id="sub_2">주소<span>부산광역시 금정구 장전동 미주빌딩, 패스파인더 3층</span></li>
+                                <li id="sub_2">팩스<span>0504-316-1645</span></li>
+                            </ul>
+                        </li>
+                        <li class="spr"></li>
+                    </ul>
+                </div>
+                <div class="btm">
+                    <ul class="main">
+                        <li><a href="#">홈페이지</a></li>
+                        <li>|</li>
+                        <li><a href="#">이용약관</a></li>
+                        <li>|</li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li>|</li>
+                        <li id="sub_1"><a href="#">ⓒ READY SPACE</a></li>
+                    </ul>
+                    <ul class="main_1">
+                        <li><a href="#"><img src="img\footer\blog.png"></a></li>
+                        <li><a href="#"><img src="img\footer\insta.png"></a></li>
+                        <li><a href="#"><img src="img\footer\facebook.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
