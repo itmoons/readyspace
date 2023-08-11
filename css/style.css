@@ -173,25 +173,25 @@ footer .fl .btm ul.main_1{
 :root[color-theme='light'] {
     --background: rgb(255, 255, 255);
     --boxColor: #000;
-    --rending-image : url('/img/light/메인페이지.png') no-repeat center;
+    --rending-image : url('../img/light/메인페이지.png') no-repeat center;
     --font-color : rgb(0, 0, 0);
     --b-font-color : #fff;
-    --logo-img : url('/img/light/logo.png') no-repeat center;
-    --crd1-img : url('/img/light/crd1.png');
-    --crd2-img : url('/img/light/crd2.png');
-    --crd3-img : url('/img/light/crd3.png');
+    --logo-img : url('../img/light/logo.png') no-repeat center;
+    --crd1-img : url('../img/light/crd1.png');
+    --crd2-img : url('../img/light/crd2.png');
+    --crd3-img : url('../img/light/crd3.png');
   }
   
 :root[color-theme='dark'] {
     --background: rgb(0, 0, 0);
     --boxColor: #fff;
-    --rending-image : url('/img/backimg/메인페이지.jpg') no-repeat center;
+    --rending-image : url('../img/backimg/메인페이지.jpg') no-repeat center;
     --font-color : rgb(255, 255, 255);
     --b-font-color : #000000;
-    --logo-img : url('/img/header/logo.png') no-repeat center;
-    --crd1-img : url('/img/contents/Group 31.png');
-    --crd2-img : url('/img/contents/Group 34.png');
-    --crd3-img : url('/img/contents/Group 35.png');
+    --logo-img : url('../img/header/logo.png') no-repeat center;
+    --crd1-img : url('../img/contents/Group 31.png');
+    --crd2-img : url('../img/contents/Group 34.png');
+    --crd3-img : url('../img/contents/Group 35.png');
 }
 
 
@@ -405,7 +405,7 @@ ul.con li p.m1{
 .container .l_top > .im{
     width: 1.875rem;
     height: 2.625rem;
-    background: url('/img/light/ICON.png') no-repeat center;
+    background: url('../img/light/ICON.png') no-repeat center;
 }
 
 .container .l_cen{
@@ -433,7 +433,7 @@ ul.con li p.m1{
     bottom: 0;
     right: 0;
     margin-left: 10rem;
-    background: url('/img/light/tran_1.png') no-repeat center;
+    background: url('../img/light/tran_1.png') no-repeat center;
     background-size: 24rem 24rem;
 }
 
@@ -466,7 +466,7 @@ ul.con li p.m1{
 .container .fir .l_top > .im{
     width: 1.875rem;
     height: 2.625rem;
-    background: url('/img/light/ICON.png') no-repeat center;
+    background: url('../img/light/ICON.png') no-repeat center;
 }
 
 .container .fir p{
@@ -500,7 +500,7 @@ ul.con li p.m1{
     height: 30rem;
     margin-left: 12rem;
     margin-top: 4.4rem;
-    background: url('/img/light/tran_3.png') no-repeat center;
+    background: url('../img/light/tran_3.png') no-repeat center;
     background-size: 22rem 22rem;
 }
 
@@ -537,7 +537,7 @@ ul.con li p.m1{
     flex-shrink: 0;
     bottom: 0;
     right: 0;
-    background: url('/img/light/tran_2.png') no-repeat center;
+    background: url('../img/light/tran_2.png') no-repeat center;
     background-size: 22rem;
 }
 
@@ -576,7 +576,7 @@ ul.con li p.m1{
 .container .sec .r_top .rq .im{
     width: 1.875rem;
     height: 2.625rem;
-    background: url('/img/light/ICON.png') no-repeat center;
+    background: url('../img/light/ICON.png') no-repeat center;
 }
 
 
@@ -630,7 +630,7 @@ ul.con li p.m1{
 }
 
 .container .thr .f .manpower{
-    background: url('/img/light/manpower.png') no-repeat center;
+    background: url('../img/light/manpower.png') no-repeat center;
     background-size: 23.1875rem 5.375rem;
     width: 23.1875rem;
     height: 6rem;
@@ -688,7 +688,7 @@ ul.con li p.m1{
 .container .thr .s ul.main li .im1{
     width: 20rem;
     height: 20rem;
-    background: url('/img/light/ra1.png');
+    background: url('../img/light/ra1.png');
     background-size: 20rem 20rem;
 }
 
@@ -706,7 +706,7 @@ ul.con li p.m1{
 }
 
 ul.main li ul.sub .w2 > .cir1{
-    background: url('/img/light/Ellipse7.svg') no-repeat center;
+    background: url('../img/light/Ellipse7.svg') no-repeat center;
     background-size: 0.275rem 0.275rem;
     width: 0.875rem;
     height: 0.875rem;
@@ -744,7 +744,7 @@ p.co{
 .container .thr .t ul.main li .im2{
     width: 20rem;
     height: 20rem;
-    background: url('/img/light/ra2.png') no-repeat center;
+    background: url('../img/light/ra2.png') no-repeat center;
     background-size: 20rem 20rem;
 }
 
