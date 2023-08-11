@@ -25,7 +25,7 @@ img{
     --rending-image : #fff;
     --font-color : rgb(0, 0, 0);
     --b-font-color : #fff;
-    --logo-img : url('/img/light/logo.png') no-repeat center;
+    --logo-img : url('../img/light/logo.png') no-repeat center;
   }
   
 :root[color-theme='dark'] {
@@ -34,7 +34,7 @@ img{
     --rending-image : #000;
     --font-color : rgb(255, 255, 255);
     --b-font-color : #000000;
-    --logo-img : url('/img/header/logo.png') no-repeat center;
+    --logo-img : url('../img/header/logo.png') no-repeat center;
 }
 
 
