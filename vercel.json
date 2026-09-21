@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/config", "destination": "/index.html" },
+    { "source": "/portfolio", "destination": "/index.html" },
+    { "source": "/awards", "destination": "/index.html" }
+  ],
+  "redirects": [
+    { "source": "/config.html", "destination": "/config", "permanent": true },
+    { "source": "/portfolio.html", "destination": "/portfolio", "permanent": true },
+    { "source": "/prospect.html", "destination": "/awards", "permanent": true }
+  ]
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { ArrowDown, ArrowUpRight, Asterisk, Menu, Radio, Sparkles, Users, X, Zap } from 'lucide-react';
 import './styles.css';
 
@@ -9,6 +9,50 @@ const missions = [
   { no: '02', type: 'COMMUNITY', title: ['좋아하는 마음이', '서로를 만날 때'], text: '같은 관심사를 가진 사람들과 자연스럽게 연결되고, 경험과 영감을 나누는 커뮤니티를 만듭니다.', image: '/img/contents/Group 34.png' },
   { no: '03', type: 'EXPERIENCE', title: ['화면을 넘어', '진짜 경험으로'], text: '온라인에서 시작된 발견을 모임과 이벤트로 확장해, 일상에 오래 남을 장면을 함께 완성합니다.', image: '/img/contents/Group 35.png' },
 ];
+
+const seoPages = {
+  '/': {
+    title: '레디스페이스 | READY SPACE — Find Your Orbit',
+    description: '레디스페이스(READY SPACE)는 브랜드, 웹사이트와 디지털 경험을 만드는 크리에이티브 스튜디오입니다.',
+  },
+  '/config': {
+    title: '레디스페이스 작업 방식 | Config',
+    description: '기획, 디자인, 개발을 연결해 아이디어를 완성하는 레디스페이스의 작업 방식과 핵심 가치를 소개합니다.',
+  },
+  '/portfolio': {
+    title: '레디스페이스 포트폴리오 | Portfolio',
+    description: '리모션, 스탬플릿, 지출레시피, 틱폴리오, 바이브키트 등 레디스페이스가 만든 웹 프로젝트를 확인하세요.',
+  },
+  '/awards': {
+    title: '레디스페이스 수상 경력 | Awards & Milestones',
+    description: '예비창업패키지, SKKU SIS 대상, IBK 창공, BUSAN 슬러시드 등 레디스페이스의 수상 및 성장 기록입니다.',
+  },
+};
+
+function SeoManager() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const page = seoPages[pathname] || seoPages['/'];
+    const canonicalUrl = `https://readyspace-self.vercel.app${pathname === '/' ? '/' : pathname}`;
+    const setMeta = (selector, value) => {
+      const element = document.head.querySelector(selector);
+      if (element) element.setAttribute('content', value);
+    };
+
+    document.title = page.title;
+    setMeta('meta[name="description"]', page.description);
+    setMeta('meta[property="og:title"]', page.title);
+    setMeta('meta[property="og:description"]', page.description);
+    setMeta('meta[property="og:url"]', canonicalUrl);
+    setMeta('meta[name="twitter:title"]', page.title);
+    setMeta('meta[name="twitter:description"]', page.description);
+    const canonical = document.head.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', canonicalUrl);
+  }, [pathname]);
+
+  return null;
+}
 
 function Logo() {
   return <Link className="logo" to="/" aria-label="READY SPACE 홈"><img className="logo-symbol" src="/img/logo-symbol.png" alt="" /><span>READY<br />SPACE</span></Link>;
@@ -191,7 +235,7 @@ function App() {
       <div className="hero-orbit orbit-one" aria-hidden="true"><span /></div><div className="hero-orbit orbit-two" aria-hidden="true"><span /></div>
       <div className="planet" aria-hidden="true"><div className="planet-glow" /><div className="satellite-orbit"><span className="satellite"><i /></span></div></div>
       <div className="hero-copy">
-        <div className="eyebrow"><Radio size={13} /> SIGNAL FROM READY SPACE <span>25.09°</span></div>
+        <div className="eyebrow"><Radio size={13} /> 레디스페이스 · READY SPACE <span>25.09°</span></div>
         <h1 id="hero-title">FIND YOUR<br /><em>OWN ORBIT.</em></h1>
         <div className="hero-bottom"><p>좋아하는 것을 발견하고,<br />나만의 궤도를 그리기 시작하세요.</p><a className="round-link" href="#about" aria-label="아래로 이동"><ArrowDown /></a></div>
       </div>
@@ -204,7 +248,7 @@ function App() {
         <h2 data-reveal="left">WE ARE<br />READY.</h2>
         <div className="manifesto-copy" data-reveal="right">
           <p className="lead">모든 사람의 마음속에는<br />아직 발견하지 못한 행성이 있습니다.</p>
-          <p>READY SPACE는 취미를 통해 일상의 새로운 가능성을 발견하는 라이프스타일 커뮤니티입니다. 궁금증에 불을 붙이고, 낯선 경험을 반갑게 맞이하며, 좋아하는 마음들이 서로 연결되도록 돕습니다.</p>
+          <p>레디스페이스(READY SPACE)는 취미와 아이디어를 브랜드, 웹사이트, 디지털 경험으로 연결하는 크리에이티브 스튜디오입니다. 궁금증에 불을 붙이고, 낯선 경험을 반갑게 맞이하며, 좋아하는 마음들이 서로 연결되도록 돕습니다.</p>
           <a className="text-link" href="#missions">우리의 미션 보기 <ArrowUpRight size={17} /></a>
         </div>
       </div>
@@ -329,7 +373,7 @@ function AwardsPage() {
 }
 
 function RoutedApp() {
-  return <BrowserRouter><ContentProtection /><Routes>
+  return <BrowserRouter><ContentProtection /><SeoManager /><Routes>
     <Route path="/" element={<App />} />
     <Route path="/config" element={<ConfigPage />} />
     <Route path="/portfolio" element={<PortfolioPage />} />
